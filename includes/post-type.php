@@ -17,7 +17,7 @@ function register_cpt_event(){
         'show_in_rest' => true,
         'taxonomies' => array('category','post_tag'),
         'supports' => [
-            'title', 'excerpt', 'thumbnail', 
+            'title', 'excerpt', 
         ],
     ];
 

@@ -30,9 +30,19 @@ function add_metaboxes_event() {
             'normal',
             'high'
         );
+
+        add_meta_box(
+            'event_thumbnail_info',
+            'Imagen Destacada del Evento',
+            'event_thumbnail_info_callback',
+            'event',
+            'side',
+            'low'
+        );
     }
 }
 add_action('add_meta_boxes', 'add_metaboxes_event');
+
 
 function event_basic_info_callback( $post ) {
     $event_date = get_post_meta( $post->ID, '_event_date', true );
@@ -86,6 +96,18 @@ function event_status_info_callback( $post ) {
     <input type="checkbox" id="main_event" name="main_event" value="1" <?php checked( $main_event, '1' ); ?> />
 </p>
 <?php
+}
+
+function event_thumbnail_info_callback( $post ) {
+    
+    //$thumbnail = get_post_meta( $post->ID, '_event_thumbnail', true );
+    $thumbnail = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png";
+
+    if ( $thumbnail ) {
+        echo '<img src="' . esc_url( $thumbnail ) . '" alt="Imagen Destacada" style="max-width:100%;" />';
+    } else {
+        echo '<p>No hay una imagen destacada asignada a este evento.</p>';
+    }
 }
 
 function save_custom_fields_event( $post_id ) {
