@@ -1,5 +1,6 @@
 <?php
 
+//Register Meta Boxes for CPT Event
 function add_metaboxes_event() {
     global $post;
 
@@ -100,7 +101,6 @@ function event_status_info_callback( $post ) {
 
 function event_thumbnail_info_callback( $post ) {
     
-    //$thumbnail = get_post_meta( $post->ID, '_event_thumbnail', true );
     $thumbnail = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/991px-Placeholder_view_vector.svg.png";
 
     if ( $thumbnail ) {

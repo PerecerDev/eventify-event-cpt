@@ -14,6 +14,7 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/post-type.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/meta-boxes.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/template.php';
 
+//Import example data
 require_once plugin_dir_path( __FILE__ ) . 'mocks/import_event_data.php';
 
 ?>

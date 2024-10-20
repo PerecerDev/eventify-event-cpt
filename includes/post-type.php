@@ -1,5 +1,6 @@
 <?php 
 
+// Register CPT 
 function register_cpt_event(){
 
     $labels = [
