@@ -15,8 +15,9 @@ function register_cpt_event(){
         'public' => true,
         'has_archive' => true,
         'show_in_rest' => true,
+        'taxonomies' => array('category','post_tag'),
         'supports' => [
-            'title', 'editor', 'excerpt', 'thumbnail', 
+            'title', 'excerpt', 'thumbnail', 
         ],
     ];
 
