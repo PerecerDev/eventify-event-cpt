@@ -19,6 +19,7 @@ function register_cpt_event(){
         'supports' => [
             'title', 'excerpt', 
         ],
+        'menu_icon' => 'dashicons-calendar',
     ];
 
     register_post_type( 'event', $args );
